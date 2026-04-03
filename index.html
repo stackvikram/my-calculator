@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World Calculator</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; }
+        .calc { border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        input { width: 40px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <h2>Calc v1.0</h2>
+        <input type="number" id="n1"> + <input type="number" id="n2">
+        <button onclick="calc()">=</button>
+        <span id="res">?</span>
+    </div>
+
+    <script>
+        function calc() {
+            const a = parseFloat(document.getElementById('n1').value);
+            const b = parseFloat(document.getElementById('n2').value);
+            document.getElementById('res').innerText = a + b;
+        }
+    </script>
+</body>
+</html>
